@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Intersection Simulator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Traffic Intersection Simulator</h1>
+            <div class="controls">
+                <button id="startBtn" class="start-btn">Start Simulation</button>
+                <button id="stopBtn" class="stop-btn" disabled>Stop Simulation</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+            </div>
+        </header>
+
+        <div class="simulation-container">
+            <div class="intersection">
+                <!-- North Road -->
+                <div class="road road-vertical road-north">
+                    <div class="lane lane-incoming"></div>
+                    <div class="lane lane-outgoing"></div>
+                </div>
+
+                <!-- South Road -->
+                <div class="road road-vertical road-south">
+                    <div class="lane lane-incoming"></div>
+                    <div class="lane lane-outgoing"></div>
+                </div>
+
+                <!-- East Road -->
+                <div class="road road-horizontal road-east">
+                    <div class="lane lane-incoming"></div>
+                    <div class="lane lane-outgoing"></div>
+                </div>
+
+                <!-- West Road -->
+                <div class="road road-horizontal road-west">
+                    <div class="lane lane-incoming"></div>
+                    <div class="lane lane-outgoing"></div>
+                </div>
+
+                <!-- Intersection Center -->
+                <div class="intersection-center"></div>
+
+                <!-- Traffic Lights -->
+                <div class="traffic-light traffic-light-north">
+                    <div class="light red" data-color="red"></div>
+                    <div class="light yellow" data-color="yellow"></div>
+                    <div class="light green" data-color="green"></div>
+                </div>
+
+                <div class="traffic-light traffic-light-south">
+                    <div class="light red" data-color="red"></div>
+                    <div class="light yellow" data-color="yellow"></div>
+                    <div class="light green" data-color="green"></div>
+                </div>
+
+                <div class="traffic-light traffic-light-east">
+                    <div class="light red" data-color="red"></div>
+                    <div class="light yellow" data-color="yellow"></div>
+                    <div class="light green" data-color="green"></div>
+                </div>
+
+                <div class="traffic-light traffic-light-west">
+                    <div class="light red" data-color="red"></div>
+                    <div class="light yellow" data-color="yellow"></div>
+                    <div class="light green" data-color="green"></div>
+                </div>
+
+                <!-- Cars Container -->
+                <div id="cars-container"></div>
+            </div>
+
+            <div class="info-panel">
+                <h3>Simulation Status</h3>
+                <div class="status-item">
+                    <span>Cars in simulation:</span>
+                    <span id="carCount">0</span>
+                </div>
+                <div class="status-item">
+                    <span>Current phase:</span>
+                    <span id="currentPhase">Stopped</span>
+                </div>
+                <div class="status-item">
+                    <span>Time remaining:</span>
+                    <span id="timeRemaining">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
