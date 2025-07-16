@@ -1,0 +1,16 @@
+{
+  "name": "static-web-app",
+  "version": "1.0.0",
+  "description": "A deployable static web application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'No build step needed for static files'"
+  },
+  "keywords": ["static", "web", "app", "vercel"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
